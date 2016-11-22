@@ -11,7 +11,6 @@ function arithmeticSlices(nums) {
       endSlice += 1;
       slice = nums.slice(i, endSlice);
     }
-    endSlice = (i+3);
   }
 
   return count;
@@ -24,5 +23,5 @@ function arithmetic(nums) {
   return (diff2 === diff1);
 }
 
-// console.log(arithmeticSlices([1, 2, 3, 4]));
+console.log(arithmeticSlices([1, 2, 3, 4]));
 console.log(arithmeticSlices([1,2,3,8,9,10]));
