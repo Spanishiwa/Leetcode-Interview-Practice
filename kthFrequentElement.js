@@ -14,3 +14,5 @@ function findKthLargest(nums, k) {
       return (freqObj[c] - freqObj[p]);
   }).slice(0, k).map(j => parseInt(j));
 }
+
+console.log(findKthLargest([3,2,1,5,6,4], 2));
