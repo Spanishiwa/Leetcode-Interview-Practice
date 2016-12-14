@@ -4,11 +4,10 @@ function twoSum(numbers, target) {
 
   for (let i = 0; i < numbers.length - 1; i += 1) {
     const firstNum = numbers[i];
-    const missingNum = target - numbers[i];
+    const missingNum = target - firstNum;
     const missingNumIdx = numbers.indexOf(missingNum);
 
-    if (missingNumIdx !== -1) {
-      console.log(missingNumIdx);
+    if (missingNumIdx !== -1 && i < missingNumIdx) {
       index1 += i;
       index2 += missingNumIdx;
     }
