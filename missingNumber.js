@@ -1,11 +1,13 @@
 function missingNumber(nums) {
-  const previousNum = nums[0];
+  const missingSum = nums.reduce((p, c) => {
+    return (p + c);
+  }, 0);
+  
+  const maxNum = nums.length;
+  const trueSum = (maxNum * (maxNum + 1) / 2);
 
-  for (let i = 1; i < nums.length; i += 1) {
-    if (nums[i] !== previousNum + 1) {
-      return (previousNum + 1);
-    }
-  }
+  return (trueSum - missingSum);
+
 }
 
 console.log(missingNumber([0,1,3]));
